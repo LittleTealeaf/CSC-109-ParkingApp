@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class ParkingAPI {
 
-    
 
     public ParkingAPI() {
 
@@ -12,4 +11,6 @@ public class ParkingAPI {
         Random random = new Random(parkingLot.ordinal());
         return random.nextInt(110);
     }
+    
+    
 }
