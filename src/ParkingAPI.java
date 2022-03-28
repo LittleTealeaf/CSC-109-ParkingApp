@@ -12,8 +12,8 @@ public class ParkingAPI {
 	}
 	
 	public int getFilledSpots(ParkingLot parkingLot) {
-		
-		int spots =  ParkingLot - getFilledSpots(parkingLot);
+		int numberOfSpots = parkingLot.totalParkingSpots;
+		int spots =  numberOfSpots - getOpenSpots(parkingLot);
 		return spots;
 	}
 
