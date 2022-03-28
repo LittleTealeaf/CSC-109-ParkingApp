@@ -12,13 +12,14 @@ public class ParkingAPI {
 	}
 	
 	public int getFilledSpots(ParkingLot parkingLot) {
-		Random random = new Random(parkingLot.ordinal());
-		return random.nextInt(110);
+		
+		int spots =  ParkingLot - getFilledSpots(parkingLot);
+		return spots;
 	}
 
 	public ParkingLot availableParkingLots(ParkingLot one, ParkingLot two) {
-		int availableLotOne = getOpenSpots(one) - getFilledSpots(one);
-		int availableLotTwo = getOpenSpots(two) - getFilledSpots(two);
+		int availableLotOne = getFilledSpots(one);
+		int availableLotTwo =  getFilledSpots(two);
 		if (availableLotOne > availableLotTwo) {
 			return one;
 		} else if (availableLotOne < availableLotTwo) {
