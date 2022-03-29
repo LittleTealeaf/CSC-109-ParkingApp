@@ -11,6 +11,11 @@ public class ParkingAPI {
 		return random.nextInt(110);
 	}
 
+	/**
+	 * Gets the future predicted open parking spots
+	 * @param parkingLot The parking lot to check
+	 * @return The predicted open parking spots in the lot
+	 */
 	public int getPredictedOpenSpots(ParkingLot parkingLot) {
 		Random random = new Random(parkingLot.ordinal() + 100);
 
@@ -23,6 +28,11 @@ public class ParkingAPI {
 		return spots;
 	}
 
+	/**
+	 * Gets the future predicted closed parking spots
+	 * @param parkingLot The parking lot to check
+	 * @return The predicted closed parking spots in the lot
+	 */
 	public int getPredictedClosedSpots(ParkingLot parkingLot) {
 		return parkingLot.totalParkingSpots - getPredictedOpenSpots(parkingLot);
 	}
