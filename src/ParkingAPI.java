@@ -10,11 +10,21 @@ public class ParkingAPI {
 		Random random = new Random(parkingLot.ordinal());
 		return random.nextInt(110);
 	}
+
+	public int getPredictedOpenSpots(ParkingLot parkingLot) {
+		Random random = new Random(parkingLot.ordinal() + 100);
+
+		return random.nextInt(parkingLot.totalParkingSpots);
+	}
 	
 	public int getFilledSpots(ParkingLot parkingLot) {
 		int numberOfSpots = parkingLot.totalParkingSpots;
 		int spots =  numberOfSpots - getOpenSpots(parkingLot);
 		return spots;
+	}
+
+	public int getPredictedClosedSpots(ParkingLot parkingLot) {
+		return parkingLot.totalParkingSpots - getPredictedOpenSpots(parkingLot);
 	}
 
 	public ParkingLot availableParkingLots(ParkingLot one, ParkingLot two) {
