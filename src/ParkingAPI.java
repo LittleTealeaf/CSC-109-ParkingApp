@@ -18,8 +18,10 @@ public class ParkingAPI {
 	 */
 	public int getPredictedOpenSpots(ParkingLot parkingLot) {
 		Random random = new Random(parkingLot.ordinal() + 100);
-
-		return random.nextInt(parkingLot.totalParkingSpots);
+		int current = getOpenSpots(parkingLot);
+		int bound = (int) (Math.min(current,parkingLot.totalParkingSpots - current) * 3 / 4);
+		
+		return current + random.nextInt(-bound,bound);
 	}
 	
 	public int getFilledSpots(ParkingLot parkingLot) {
