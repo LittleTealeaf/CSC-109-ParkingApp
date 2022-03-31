@@ -8,7 +8,7 @@ public class ParkingAPI {
 
 	public int getOpenSpots(ParkingLot parkingLot) {
 		Random random = new Random(parkingLot.ordinal());
-		return random.nextInt(110);
+		return random.nextInt(0,parkingLot.totalParkingSpots);
 	}
 
 	/**
