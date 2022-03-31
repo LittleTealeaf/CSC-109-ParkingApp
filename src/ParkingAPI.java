@@ -20,7 +20,6 @@ public class ParkingAPI {
 		Random random = new Random(parkingLot.ordinal() + 100);
 		int current = getOpenSpots(parkingLot);
 		int bound = (int) (Math.min(current,parkingLot.totalParkingSpots - current) * 3 / 4);
-		
 		return current + random.nextInt(-bound,bound);
 	}
 	
@@ -52,8 +51,8 @@ public class ParkingAPI {
 		}
 	}
 	public ParkingLot predictedOpenSpots(ParkingLot one, ParkingLot two) {
-		int lotOne = getPredictedOpenSpots(one) - getPredictedClosedSpots(one);
-		int lotTwo = getPredictedOpenSpots(two) - getPredictedClosedSpots(two);
+		int lotOne = getPredictedOpenSpots(one);
+		int lotTwo = getPredictedOpenSpots(two); 
 		if (lotOne > lotTwo){
 			return one;
 		} else if (lotOne < lotTwo) {
