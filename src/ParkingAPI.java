@@ -8,7 +8,7 @@ public class ParkingAPI {
 
 	public int getOpenSpots(ParkingLot parkingLot) {
 		Random random = new Random(parkingLot.ordinal());
-		return random.nextInt(110);
+		return random.nextInt(0,parkingLot.totalParkingSpots);
 	}
 
 	/**
@@ -20,7 +20,6 @@ public class ParkingAPI {
 		Random random = new Random(parkingLot.ordinal() + 100);
 		int current = getOpenSpots(parkingLot);
 		int bound = (int) (Math.min(current,parkingLot.totalParkingSpots - current) * 3 / 4);
-		
 		return current + random.nextInt(-bound,bound);
 	}
 	
@@ -47,7 +46,17 @@ public class ParkingAPI {
 		} else if (availableLotOne < availableLotTwo) {
 			return two;
 		} else {
-			System.out.println("Both lots are full..");
+			return null;
+		}
+	}
+	public ParkingLot predictedOpenSpots(ParkingLot one, ParkingLot two) {
+		int lotOne = getPredictedOpenSpots(one);
+		int lotTwo = getPredictedOpenSpots(two); 
+		if (lotOne > lotTwo){
+			return one;
+		} else if (lotOne < lotTwo) {
+			return two;
+		} else {
 			return null;
 		}
 	}
