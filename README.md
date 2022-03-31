@@ -16,7 +16,7 @@ An app that tells you how full a parking lot is and if there is any other space 
 |  | ?? | Deliver additional information if there's a traffic jam
 | ✅ | Kevin | Fix API (See Issue #5 ) - Solved in pull request #8
 
-Programming Tasks
+## Programming Tasks
 
 - Write code to interpret parking lot inputs to compile the current parking lot state
 - Write statistic tracking and predicting
