@@ -51,4 +51,16 @@ public class ParkingAPI {
 			return null;
 		}
 	}
+	public ParkingLot predictedOpenSpots(ParkingLot one, ParkingLot two) {
+		int lotOne = getPredictedOpenSpots(one) - getPredictedClosedSpots(one);
+		int lotTwo = getPredictedOpenSpots(two) - getPredictedClosedSpots(two);
+		if (lotOne > lotTwo){
+			return one;
+		} else if (lotOne < lotTwo) {
+			return two;
+		} else {
+			System.out.println("Both lots are full..");
+			return null;
+		}
+	}
 }
