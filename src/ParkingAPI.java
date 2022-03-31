@@ -46,7 +46,6 @@ public class ParkingAPI {
 		} else if (availableLotOne < availableLotTwo) {
 			return two;
 		} else {
-			System.out.println("Both lots are full..");
 			return null;
 		}
 	}
@@ -58,7 +57,6 @@ public class ParkingAPI {
 		} else if (lotOne < lotTwo) {
 			return two;
 		} else {
-			System.out.println("Both lots are full..");
 			return null;
 		}
 	}
