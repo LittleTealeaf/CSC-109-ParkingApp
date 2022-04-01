@@ -29,6 +29,11 @@ public class ParkingAPI {
 		return spots;
 	}
 
+	public boolean hasTrafficJam(ParkingLot parkingLot) {
+		Random random = new Random(parkingLot.ordinal() * 1244);
+		return random.nextInt(100) > 80;
+	}
+
 	/**
 	 * Gets the future predicted closed parking spots
 	 * @param parkingLot The parking lot to check
