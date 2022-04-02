@@ -3,18 +3,19 @@
 An app that tells you how full a parking lot is and if there is any other space on campus that you can park at.
 
 ## App Progress
-
-| Progress | Member | Task |
-| :--: | :--: | :-- |
-| ✅ | Thomas | Create Mockup API
-| ✅ | Thomas | Add Predictions to API
-| ✅ | Kevin | Add Additional API Methods
-|  | ?? | Deliver Parking lot with the most currently open spots
+| Progress | Pull Request | Member | Task |
+| :--: | :--: | :--: | :-- |
+| ✅ | #3 | Thomas | Create Mockup API
+| ✅ | #6 | Thomas | Add Predictions to API
+| ✅ | #4 | Kevin | Add Additional API Methods
+| ✅ | #8 | Kevin | Add Additional Predictions to API
+|  | |?? | Deliver Parking lot with the most currently open spots
 | ✅ | Kevin | Deliver parking lot with the most predicted open spots
-|  | ?? | Deliver Predicted overall flow of traffic
-|  | ?? | Add Traffic Jam to API
-|  | ?? | Deliver additional information if there's a traffic jam
-| ✅ | Kevin | Fix API (See Issue #5 ) - Solved in pull request #8
+|  | |?? | Deliver Predicted overall flow of traffic
+|  | |?? | Add Traffic Jam to API
+|  | |?? | Deliver additional information if there's a traffic jam
+| ✅ | #8 | Kevin | Fix API (See Issue #5 )
+
 
 ## Programming Tasks
 
