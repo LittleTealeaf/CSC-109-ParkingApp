@@ -29,9 +29,9 @@ public class ParkingAPI {
 		return spots;
 	}
 
-	public boolean hasTrafficJam(ParkingLot parkingLot) {
-		Random random = new Random(parkingLot.ordinal() * 1244);
-		return random.nextInt(100) > 80;
+	public float trafficJamChance(ParkingLot parkingLot) {
+		Random random = new Random(parkingLot.totalParkingSpots + parkingLot.ordinal());
+		return random.nextFloat(0,1);
 	}
 
 	/**
