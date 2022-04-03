@@ -12,7 +12,7 @@ An app that tells you how full a parking lot is and if there is any other space 
 |  | |?? | Deliver Parking lot with the most currently open spots
 | ✅ | Kevin | Deliver parking lot with the most predicted open spots
 |  | |?? | Deliver Predicted overall flow of traffic
-|  | |?? | Add Traffic Jam to API
+| ✅ | #10 | Thomas | Add Traffic Jam to API
 |  | |?? | Deliver additional information if there's a traffic jam
 | ✅ | #8 | Kevin | Fix API (See Issue #5 )
 

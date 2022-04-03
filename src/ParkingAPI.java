@@ -29,6 +29,11 @@ public class ParkingAPI {
 		return spots;
 	}
 
+	public float trafficJamChance(ParkingLot parkingLot) {
+		Random random = new Random(parkingLot.totalParkingSpots + parkingLot.ordinal());
+		return random.nextFloat(0,1);
+	}
+
 	/**
 	 * Gets the future predicted closed parking spots
 	 * @param parkingLot The parking lot to check
